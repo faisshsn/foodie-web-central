@@ -2,7 +2,7 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
-import { Pizza, Ramen, Burger, Curry, Falafel, ChefHat } from "lucide-react";
+import { Pizza, Soup, Sandwich, Cake, Egg, ChefHat } from "lucide-react";
 import { useNavigate, useLocation } from "react-router-dom";
 
 interface CuisineOption {
@@ -14,10 +14,10 @@ interface CuisineOption {
 const cuisines: CuisineOption[] = [
   { name: "All", value: "", icon: <ChefHat className="h-5 w-5" /> },
   { name: "Italian", value: "italian", icon: <Pizza className="h-5 w-5" /> },
-  { name: "Asian", value: "asian", icon: <Ramen className="h-5 w-5" /> },
-  { name: "American", value: "american", icon: <Burger className="h-5 w-5" /> },
-  { name: "Indian", value: "indian", icon: <Curry className="h-5 w-5" /> },
-  { name: "Middle Eastern", value: "middle-eastern", icon: <Falafel className="h-5 w-5" /> },
+  { name: "Asian", value: "asian", icon: <Soup className="h-5 w-5" /> },
+  { name: "American", value: "american", icon: <Sandwich className="h-5 w-5" /> },
+  { name: "Indian", value: "indian", icon: <Cake className="h-5 w-5" /> },
+  { name: "Middle Eastern", value: "middle-eastern", icon: <Egg className="h-5 w-5" /> },
 ];
 
 const CuisineFilter = () => {
