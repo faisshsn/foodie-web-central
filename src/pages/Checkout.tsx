@@ -277,7 +277,7 @@ const Checkout = () => {
                         <span className="font-medium">{item.quantity}x </span>
                         {item.name}
                       </div>
-                      <div>${(item.price * item.quantity).toFixed(2)}</div>
+                      <div>₹{(item.price * item.quantity).toFixed(2)}</div>
                     </div>
                   ))}
                 </div>
@@ -287,15 +287,15 @@ const Checkout = () => {
                 <div className="space-y-2">
                   <div className="flex justify-between">
                     <span>Subtotal</span>
-                    <span>${getCartTotal().toFixed(2)}</span>
+                    <span>₹{getCartTotal().toFixed(2)}</span>
                   </div>
                   <div className="flex justify-between">
                     <span>Delivery Fee</span>
-                    <span>$0.00</span>
+                    <span>₹0.00</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>Tax</span>
-                    <span>${(getCartTotal() * 0.1).toFixed(2)}</span>
+                    <span>GST (18%)</span>
+                    <span>₹{(getCartTotal() * 0.18).toFixed(2)}</span>
                   </div>
                 </div>
                 
@@ -303,7 +303,7 @@ const Checkout = () => {
                 
                 <div className="flex justify-between text-lg font-bold">
                   <span>Total</span>
-                  <span>${(getCartTotal() * 1.1).toFixed(2)}</span>
+                  <span>₹{(getCartTotal() * 1.18).toFixed(2)}</span>
                 </div>
               </CardContent>
               <CardFooter className="bg-gray-50 p-6">

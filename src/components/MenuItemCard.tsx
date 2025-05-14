@@ -78,7 +78,7 @@ const MenuItemCard = ({
               </p>
             </div>
             <div className="text-right">
-              <div className="font-medium mb-2">${price.toFixed(2)}</div>
+              <div className="font-medium mb-2">₹{price.toFixed(2)}</div>
               <Button
                 size="sm"
                 onClick={handleAddToCart}

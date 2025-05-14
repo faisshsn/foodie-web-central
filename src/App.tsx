@@ -14,6 +14,7 @@ import OrderConfirmation from "./pages/OrderConfirmation";
 import Admin from "./pages/Admin";
 import AdminOrders from "./pages/AdminOrders";
 import AdminRestaurants from "./pages/AdminRestaurants";
+import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -30,6 +31,7 @@ const App = () => (
             <Route path="/restaurant/:id" element={<RestaurantDetails />} />
             <Route path="/checkout" element={<Checkout />} />
             <Route path="/order-confirmation/:orderId" element={<OrderConfirmation />} />
+            <Route path="/contact" element={<Contact />} />
             {/* Admin Routes */}
             <Route path="/admin" element={<Admin />} />
             <Route path="/admin/orders" element={<AdminOrders />} />
