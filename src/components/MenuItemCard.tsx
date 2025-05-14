@@ -50,6 +50,12 @@ const MenuItemCard = ({
             src={image}
             alt={name}
             className="w-full h-full object-cover"
+            onError={(e) => {
+              // Fallback image if the original fails to load
+              const target = e.target as HTMLImageElement;
+              target.onerror = null;
+              target.src = "https://images.unsplash.com/photo-1559925393-8be0ec4767c8?q=80&w=2071&auto=format&fit=crop";
+            }}
           />
         </div>
         <CardContent className="flex-1 p-4">
