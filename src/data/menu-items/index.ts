@@ -25,7 +25,8 @@ export const menuItems: MenuItem[] = [
   ...northEastItems
 ];
 
-export { MenuItem } from './types';
+// Export the type with the 'export type' syntax to fix the isolatedModules error
+export type { MenuItem } from './types';
 
 // Helper functions
 export const getMenuItemsByRestaurant = (restaurantId: string): MenuItem[] => {
