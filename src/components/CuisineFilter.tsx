@@ -2,7 +2,7 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
-import { Pizza, Soup, Sandwich, Cake, Egg, ChefHat } from "lucide-react";
+import { Pizza, Soup, Sandwich, Cake, Egg, ChefHat, Coffee, Fish, Wheat, Salad } from "lucide-react";
 import { useNavigate, useLocation } from "react-router-dom";
 
 interface CuisineOption {
@@ -13,11 +13,15 @@ interface CuisineOption {
 
 const cuisines: CuisineOption[] = [
   { name: "All", value: "", icon: <ChefHat className="h-5 w-5" /> },
-  { name: "Italian", value: "italian", icon: <Pizza className="h-5 w-5" /> },
-  { name: "Asian", value: "asian", icon: <Soup className="h-5 w-5" /> },
-  { name: "American", value: "american", icon: <Sandwich className="h-5 w-5" /> },
-  { name: "Indian", value: "indian", icon: <Cake className="h-5 w-5" /> },
-  { name: "Middle Eastern", value: "middle-eastern", icon: <Egg className="h-5 w-5" /> },
+  { name: "North Indian", value: "north indian", icon: <Pizza className="h-5 w-5" /> },
+  { name: "South Indian", value: "south indian", icon: <Soup className="h-5 w-5" /> },
+  { name: "Bengali", value: "bengali", icon: <Fish className="h-5 w-5" /> },
+  { name: "Maharashtrian", value: "maharashtrian", icon: <Wheat className="h-5 w-5" /> },
+  { name: "Kashmiri", value: "kashmiri", icon: <Sandwich className="h-5 w-5" /> },
+  { name: "Rajasthani", value: "rajasthani", icon: <Cake className="h-5 w-5" /> },
+  { name: "Gujarati", value: "gujarati", icon: <Salad className="h-5 w-5" /> },
+  { name: "Goan", value: "goan", icon: <Egg className="h-5 w-5" /> },
+  { name: "Kerala", value: "kerala", icon: <Coffee className="h-5 w-5" /> },
 ];
 
 const CuisineFilter = () => {
@@ -33,6 +37,7 @@ const CuisineFilter = () => {
     } else {
       params.delete("cuisine");
     }
+    // Navigate to the root path with the updated query params
     navigate(`/?${params.toString()}`);
   };
 

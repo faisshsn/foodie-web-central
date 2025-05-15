@@ -321,7 +321,9 @@ export const getRestaurantById = (id: string): Restaurant | undefined => {
 
 export const getRestaurantsByCuisine = (cuisine: string): Restaurant[] => {
   if (!cuisine) return restaurants;
-  return restaurants.filter(restaurant => restaurant.cuisine.toLowerCase() === cuisine.toLowerCase());
+  return restaurants.filter(restaurant => 
+    restaurant.cuisine.toLowerCase() === cuisine.toLowerCase()
+  );
 };
 
 export const searchRestaurants = (query: string): Restaurant[] => {
